@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forja Verde — Indústria que Respira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,700;9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="wrap">
+        <div class="logo-mark">
+            <strong>Forja <em>Verde</em></strong>
+            <small>Indústria que Respira</small>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#pilares">Pilares</a></li>
+            <li><a href="#simulador">Simulador</a></li>
+            <li><a href="#tecnologias">Tecnologias</a></li>
+            <li><a href="#simulador" class="nav-cta">Calcular Emissões</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+<section class="wrap hero">
+    <div class="hero-text">
+        <p class="hero-eyebrow">ArcelorMittal · Belgo Arames · CBMM</p>
+        <h1 class="hero-heading">
+            Aço forte.<br>
+            Planeta <span class="accent">vivo.</span>
+        </h1>
+        <p class="hero-sub">
+            Uma aliança entre as maiores forças da indústria brasileira para descarbonizar a produção de aço — e provar que eficiência industrial e responsabilidade ambiental são a mesma coisa.
+        </p>
+        <div class="btn-row">
+            <a href="#simulador" class="btn btn-primary">Calcular minhas emissões</a>
+            <a href="#pilares" class="btn btn-outline">Explorar os pilares</a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="press-plate">
+            <div class="plate-outer"></div>
+            <div class="plate-mid"></div>
+            <div class="plate-core">
+                <span class="plate-core-num">−75%</span>
+                <span class="plate-core-label">emissões de CO₂</span>
+            </div>
+        </div>
+        <div class="chip chip-a">
+            <strong>2M t</strong>
+            <small>aço verde/ano</small>
+        </div>
+        <div class="chip chip-b">
+            <strong>Nb + H₂</strong>
+            <small>tecnologia única</small>
+        </div>
+    </div>
+</section>
+
+<section class="partners">
+    <div class="partners-inner wrap">
+        <p class="partners-label">Parceiros fundadores</p>
+        <p class="partner-name">ArcelorMittal</p>
+        <p class="partner-name">Belgo Arames</p>
+        <p class="partner-name">CBMM</p>
+    </div>
+</section>
+
+<section class="pilares" id="pilares">
+    <div class="wrap">
+        <p class="section-label">Os quatro pilares</p>
+        <h2 class="section-heading">Tecnologias que transformam a cadeia do aço</h2>
+        <div class="pilares-grid">
+            <div class="pilar-card">
+                <h3>Hidrogênio Verde</h3>
+                <p>Substituição do carvão mineral por hidrogênio verde na redução direta do minério, eliminando até 90% das emissões do processo primário.</p>
+            </div>
+            <div class="pilar-card">
+                <h3>Reciclagem Avançada</h3>
+                <p>Circuito fechado de sucata de aço com rastreabilidade digital, reduzindo extração de minério bruto e consumo energético total.</p>
+            </div>
+            <div class="pilar-card">
+                <h3>Eficiência Energética</h3>
+                <p>Fornos elétricos de arco alimentados por renováveis, sistemas de recuperação de calor e controle inteligente de processo.</p>
+            </div>
+            <div class="pilar-card">
+                <h3>Nióbio como Aliado</h3>
+                <p>Microligação com nióbio (CBMM) reduz a quantidade de aço necessária por peça, diminuindo emissões e peso nas aplicações finais.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="simulador" id="simulador">
+    <div class="wrap sim-grid">
+        <div class="sim-info">
+            <p class="section-label">Simulador de carbono</p>
+            <h2 class="section-heading">Calcule o impacto da sua produção</h2>
+            <p>Insira os dados da sua operação e veja em tempo real como as tecnologias da Forja Verde podem reduzir suas emissões de CO₂ e os custos associados.</p>
+            <a href="#" class="btn btn-primary">Ver relatório completo</a>
+        </div>
+        <div class="sim-widget">
+            <h4>Simulador de Emissões</h4>
+            <div class="field">
+                <label>Volume de produção (toneladas/mês)</label>
+                <input type="number" placeholder="ex.: 10000" id="vol-input" oninput="calcular()">
+            </div>
+            <div class="field">
+                <label>Processo atual</label>
+                <select id="proc-input" onchange="calcular()">
+                    <option value="4.5">Alto-forno a coque (4,5 t CO₂/t aço)</option>
+                    <option value="3.2">Redução direta a gás (3,2 t CO₂/t aço)</option>
+                    <option value="0.8">Forno elétrico a arco (0,8 t CO₂/t aço)</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Tecnologia Forja Verde aplicada</label>
+                <select id="tec-input" onchange="calcular()">
+                    <option value="0.75">Hidrogênio verde (−75%)</option>
+                    <option value="0.55">Reciclagem avançada (−55%)</option>
+                    <option value="0.40">Eficiência energética (−40%)</option>
+                    <option value="0.85">Pacote completo (−85%)</option>
+                </select>
+            </div>
+            <div class="sim-result">
+                <span>Redução estimada de CO₂/mês</span>
+                <strong id="resultado">— t</strong>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="impacto">
+    <div class="wrap">
+        <p class="section-label">Impacto esperado</p>
+        <h2 class="section-heading">Números que justificam a mudança</h2>
+        <div class="numbers-grid">
+            <div class="number-cell">
+                <big>−75%</big>
+                <p>redução de CO₂ vs. processo convencional</p>
+            </div>
+            <div class="number-cell">
+                <big>2M t</big>
+                <p>capacidade de aço verde por ano na fase 1</p>
+            </div>
+            <div class="number-cell">
+                <big>30%</big>
+                <p>menos peso por peça com microligação de nióbio</p>
+            </div>
+            <div class="number-cell">
+                <big>2030</big>
+                <p>meta de operação em escala industrial plena</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tecnologias" id="tecnologias">
+                <div>
+                    <h3>ArcelorMittal — Infraestrutura e Escala</h3>
+                </div>
+            </div>
+                    <h3>Belgo Arames — Aplicações Finais</h3>
+                </div>
+            </div>
+            <div class="tec-card tec-card-wide">
+                <div>
+                    <h3>CBMM — Nióbio: o ingrediente secreto do aço do futuro</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div class="wrap footer-inner">
+        <p class="footer-copy">© 2026 Forja Verde · Projeto conjunto ArcelorMittal, Belgo Arames e CBMM</p>
+        <div class="footer-partners">
+            <span class="footer-tag">ArcelorMittal</span>
+            <span class="footer-tag">Belgo Arames</span>
+            <span class="footer-tag">CBMM</span>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
